@@ -9,10 +9,10 @@ class TestPasswordValidator(unittest.TestCase):
 		self.passwordValidator = None
 	def test_validate_empty(self):
 		self.assertFalse(self.passwordValidator.validate(""))
-	# def test_validate_8_lowercase_letters(self):
-	# 	self.assertFalse(self.passwordValidator.validate("abcdefgh"))
-	# def test_validate_1_uppercase_letter_and_7_lowercase_letters(self):
-	# 	self.assertFalse(self.passwordValidator.validate("Abcdefgh"))
+	def test_validate_8_lowercase_letters(self):
+		self.assertFalse(self.passwordValidator.validate("abcdefgh"))
+	def test_validate_1_uppercase_letter_and_7_lowercase_letters(self):
+		self.assertFalse(self.passwordValidator.validate("Abcdefgh"))
 	def test_validate_1_uppercase_letter_and_1_lowercase_letter_and_6_digits_and_at(self):
 		self.assertFalse(self.passwordValidator.validate("Ab123456@"))
 	def test_validate_1_uppercase_letter_and_7_lowercase_letter_and_1_digit_and_at(self):
