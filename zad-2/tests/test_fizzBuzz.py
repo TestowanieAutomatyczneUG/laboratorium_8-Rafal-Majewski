@@ -15,6 +15,7 @@ class Test_fizzBuzz(unittest.TestCase):
 	])
 	def test_valid(self, number, expectedOutput):
 		self.assertEqual(fizzBuzz(number), expectedOutput)
+
 	@parameterized.expand([
 		(set(), TypeError),
 		("a", TypeError),
@@ -22,6 +23,9 @@ class Test_fizzBuzz(unittest.TestCase):
 	])
 	def test_invalid(self, number, expectedError):
 		self.assertRaises(expectedError, fizzBuzz, number)
+
+
+
 
 # Dodatkowe
 @parameterized_class(("number", "expectedOutput"), [
